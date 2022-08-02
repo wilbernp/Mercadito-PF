@@ -1,0 +1,61 @@
+/* .gf{
+    position: relative;
+   border:0; 
+    background:rgba(255, 129, 3, 0.544);
+    border-radius: 90px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.gf:hoover{
+    background:rgb(255, 247, 172,.8)
+}
+
+.gf span{
+   display: block;
+   width: 20px;
+}
+
+.btn_fav{
+    background-color: aqua;
+} */
+
+.btn_fav {
+    width: 35px;
+    height: 35px;
+    border-style: none;
+    background-color: white;
+    // margin-left: 50px;
+    img {
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        margin-top: -25px;
+        margin-left: 95px;
+    }
+}
+
+.btn_fav:hover{
+    cursor: pointer;
+}
+
+.cardGrid {
+    position: relative;
+    width: 100%;
+    padding-top: 1%;
+    padding-left: 35%;
+    padding-right: 55%;
+}
+
+.textFav {
+    position: absolute;
+    padding-top: 60px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    
+}

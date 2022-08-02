@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+
+.nav {
+    background: #fff7f2;
+    padding: 0px 15px;
+}
+
+.logo {
+    align-content: center;
+    align-items: center;
+    text-align: justify;
+    list-style: none;
+    padding: 0px 25px 15px 25px;
+    flex: wrap;
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo h1 {
+    font-family: 'Moul', cursive;
+    font-size: 2.2rem;
+    font-weight: 170;
+    flex: flex;
+    text-decoration: none;
+}
+
+.logo h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -12px;
+    margin-left: 10px;
+    text-decoration: none;
+
+}
+
+.contentButton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    list-style: none;
+    padding: 0px;
+    
+}
+
+.item a:hover,
+.item a:hover::after {
+    color: rgb(219, 105, 43);
+}
+.item a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    justify-items: center;
+}
+
+.item a img {
+    height: 25px;
+    margin: -5px 5px;
+}
+.btn{
+    font-weight:bold;
+    position:relative;
+    display: inline-block;
+    padding:7px 15px;
+    color:rgb(3, 3, 3);
+    letter-spacing:1px;
+    text-decoration: none;
+    font-size: 0.8em;
+    overflow: hidden;
+    transition: 0.2s;
+    background:transparent;
+    border:none;
+    border-radius:10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn:hover{
+    background:#df9425b2;
+    box-shadow: 0 0 10px #eaa932,0 0 40px #f8f6f3, 0 0 80px #ffffff;
+    transition-delay: 1s;
+}
+
+.btn span{
+    position:absolute;
+    display:block;
+}
+
+.span1{
+    top:0;
+    left:-100%;
+    width:100%;
+    height:2px;
+    background:linear-gradient(90deg,transparent,#de9426);
+}
+
+.btn:hover .span1{
+    left:100%;
+    transition:1s
+}
+
+.span3{
+    bottom:0;
+    right:-100%;
+    width:100%;
+    height:2px;
+    background:linear-gradient(270deg,transparent,#de9426);
+}
+
+.btn:hover .span3{
+    right:100%;
+    transition:1s;
+    transition-delay:0.5s;
+}
+.span2{
+    top:-100%;
+    right:0;
+    width:2px;
+    height:100%;
+    background:linear-gradient(180deg,transparent,#de9426);
+}
+
+.btn:hover .span2{
+    top:100%;
+    transition:1s;
+    transition-delay:0.25s;
+}
+.span4{
+    bottom:-100%;
+    left:0;
+    width:2px;
+    height:100%;
+    background:linear-gradient(360deg,transparent,#de9426);
+}
+
+.btn:hover .span4{
+    bottom:100%;
+    transition:1s;
+    transition-delay:0.25s;
+    flex-direction: flex-end
+}
+
+.i{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+
+}
+
+.categories {
+    width: 100%;
+    background: #ff7a28;
+    padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoria {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.contentCategory {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile{
+    border-radius: 50%;
+}
+
+//para los subitems de categorias:
+// width: 100%;
+    // text-align: center;
+    // display: none;
+    // order: 3;
+
+.active{
+    transform: translate(-600px);
+}
+
+.opacity {
+    transition:all .5s ease;
+}
+.icono-menu{
+    cursor:pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.dropdown img {
+    width: 10%;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -10%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ff7a28;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 28px;
+    z-index:1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+// ordenar por:
+
+.order-category {
+    position: relative;
+    margin-left: 120px;
+    display: inline-block;
+    cursor: pointer;
+    
+    h2 {
+        font-size: 1.1em;
+    }
+    img {
+        width: 15%;
+        position: absolute;
+        margin-top: 5px;
+        margin-left: -21%;
+    }
+}
+
+
+.order {
+    display: none;
+    position: absolute;
+    background-color: #ff7a28;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 28px;
+    z-index:1;
+}
+
+.order-category:hover .order {
+    display: block;
+}

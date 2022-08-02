@@ -1,0 +1,98 @@
+.containerDetails {
+    width: 100%;
+    //height: 60%;
+    //overflow: hidden;
+    //align-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.itemContainer {
+    flex-wrap: wrap;
+    width: 80%; 
+    padding: 50px;
+    grid-template-columns:1fr 1fr;
+    display: grid;
+    margin: 0 auto;
+}
+
+.imgContainer img {
+    //position: absolute;
+    width: 80% ;
+    height: auto;
+    left: 0%;
+
+}
+
+.caracteristicas {
+    //position: relative;
+    width: 100%;
+    left: 50%;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 1.9em;
+    font-weight: 450;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 11px;
+}
+
+.price {
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(251, 98, 42);
+    padding-bottom: 10px;
+}
+
+.description {
+    font-size: 1.1em;
+    font-weight: 150;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+.caracteristicas h3 {
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 5px;
+
+    a{
+        font-size: 1.2em;
+        padding-right: 18px;
+        color: rgb(80, 75, 73);
+        font-weight: 450;
+    }
+}
+
+.detallesContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.detalles h1 {
+    font-size: 1.7em;
+    font-weight: 550;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 12px;
+    color: gray;
+    //text-decoration: underline;
+}
+
+.detalles h3 {
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 5px;
+
+    a{
+        font-size: 1.2em;
+        padding-right: 18px;
+        color: rgb(80, 75, 73);
+        font-weight: 450;
+    }
+}
+
+.footer {
+    width: 100%;
+    padding-top: 50px;
+}

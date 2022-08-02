@@ -1,0 +1,64 @@
+
+
+.cardGrid{
+    display: grid ;
+    width: 91%;
+    flex-wrap: wrap;
+    padding: 50px 100px 40px 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+@media(max-width:1500px){
+    .cardGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 15px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:1270px){
+    .cardGrid {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        margin: 10px 30px;
+    }
+}
+
+@media(max-width:900px){
+    .cardGrid {
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+        margin: 0 auto;
+    }
+}
+
+.verProducts {
+    padding: 35px 0 35px 0 ;
+    align-items: center;
+    text-align: center;
+}
+
+.verProducts button {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background: transparent;
+    cursor: pointer;
+    border-style: none;
+    
+}
+
+button:hover {
+    color:rgb(255, 111, 0)
+}
+
+.paginateContent {
+    padding: 35px 0 35px 0 ;
+    align-items: center;
+    text-align: center;
+}
