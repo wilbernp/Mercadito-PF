@@ -44,7 +44,7 @@ function reducer(state = initState, action){
         case UPDATE_URL:
             return{
                 ...state,
-                url:`http://localhost:3001/products?${state.querys.join("&")}`
+                url:`${process.env.REACT_APP_API_URL}/products?${state.querys.join("&")}`
             }
 
         case UPDATE_CURRENT_PAGE:
@@ -55,7 +55,7 @@ function reducer(state = initState, action){
         case GET_ALL_PRODUCTS:
             return{
                 ...state,
-                url: `http://localhost:3001/products?page=${0}&limit=${16}`
+                url: `${process.env.REACT_APP_API_URL}/products?page=${0}&limit=${16}`
             }
         case GET_CATEGORIES:
             return{
