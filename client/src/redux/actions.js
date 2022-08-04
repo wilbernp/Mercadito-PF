@@ -40,7 +40,7 @@ function get_all_products(){
     }
 }
 
-const URL = "http://localhost:3001/categories"
+const URL = `${process.env.REACT_APP_API_URL}/categories`
 function get_categories(){
     return(dispatch)=>{
         return fetch(URL)
@@ -91,7 +91,7 @@ let arr = [
 
 function get_features(query){
     return(dispatch)=>{
-        return fetch(`http://localhost:3001/features?${query}`)
+        return fetch(`${process.env.REACT_APP_API_URL}/features?${query}`)
         .then(res => res.json())
         .then(json =>{
             console.log(json)

@@ -38,7 +38,7 @@ export default function Home() {
                 setFetchData(res)
                 return
             }
-            let res = await fetch(`http://localhost:3001/products?page=${0}&limit=${productsPerpage}`).then(res => res.json())
+            let res = await fetch(`${process.env.REACT_APP_API_URL}/products?page=${0}&limit=${productsPerpage}`).then(res => res.json())
 
 
             setFetchData(res)

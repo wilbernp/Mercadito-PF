@@ -19,7 +19,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
   <Elements stripe={stripePromise}>
-    <GoogleOAuthProvider clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}>
+    <GoogleOAuthProvider clientId={"209438741880-erue5s6t361k4378a6d3nt4knd0qoq0m.apps.googleusercontent.com"}>
       <Provider store={store}>
         <BrowserRouter>
           <App />
