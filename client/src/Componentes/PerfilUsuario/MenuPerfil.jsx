@@ -74,7 +74,7 @@ export default function MenuPerfil({lagout, image}) {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem>
+        {/* <MenuItem>
         <ListItemIcon>
             <EditIcon />
           </ListItemIcon>
@@ -82,7 +82,7 @@ export default function MenuPerfil({lagout, image}) {
           Editar perfil
          
           </Link>
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem>
         <Link to="/Mis-compras" style={{textDecoration:"none", color:"black"}}>
            Mis compras

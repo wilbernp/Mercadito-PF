@@ -18,7 +18,7 @@ export default function Orden() {
       (
           async function(){
               const {data} = await clienteAxios.get(`/shoping/${id_cart}`)
-              setOrdenP(data,"oo")
+              setOrdenP(data)
               console.log(data)
           }
       )()
@@ -56,10 +56,10 @@ export default function Orden() {
             {
             ordernP.calc &&
               <div className='calc'>
-                <h3><a>Subtotal:</a> {ordernP.calc.subtotal}</h3>
-                <h3><a>Total Products:</a> {ordernP.calc.total}</h3>
-                <h3><a>Impuestos:</a> $ {ordernP.calc.impuestos}</h3>
-                <h3><a>Precio Total:</a> $ {ordernP.calc.totalPrice}</h3>
+                <h3><a>Subtotal:</a> ${ordernP.calc.subTotal}</h3>
+                <h3><a>Total Products:</a> {ordernP.calc.totalProducts}</h3>
+                <h3><a>Impuestos:</a> ${ordernP.calc.impuestos}</h3>
+                <h3><a>Precio Total:</a> ${ordernP.calc.totalPrice}</h3>
               </div>
             } 
 
