@@ -12,6 +12,13 @@ export default function ButtonAddCart(product) {
     async function handleClick(e) {
         e.preventDefault()
         let id_cart = localStorage.getItem("id_cart")
+
+            if (!id_cart) {
+              let{data} = await clienteAxios.post("/shoping")
+              localStorage.setItem("id_cart", data._id)
+            }
+            id_cart = localStorage.getItem("id_cart")
+          
         await clienteAxios.post(`/shoping/insert-product/${id_cart}`, product)
         history.push("/shoping-car")
     }

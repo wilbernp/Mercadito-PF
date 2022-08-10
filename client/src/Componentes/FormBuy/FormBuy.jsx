@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
+import Swal from 'sweetalert2'
 
 import './FormBuy.scss'
 
@@ -100,7 +101,12 @@ export default function FormBuy() {
             ! input.ciudad ||
             ! input.pais ||
             ! input.telefono){
-                return alert("parametros requeridos")
+                return Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Parametros requeridos',
+                    // footer: '<a href="">Why do I have this issue?</a>'
+                  })
             }
 
             await clienteAxios.put(`/Orden/${id_cart}`,input)
@@ -117,8 +123,6 @@ export default function FormBuy() {
             })
 
       }
-
-
 
     return(
         <div className='formContainer'>
