@@ -6,6 +6,7 @@ import heart_a from '../icons/love.png'
 
 // const {data}= await clienteAxios.get(`/favorites/${idproducto}?user=${profile?.name}`)
 function Fav({id}) {
+  // console.log(id)
 
   let [agregate, setAgregate] = useState(false)
 

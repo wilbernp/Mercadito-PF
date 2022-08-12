@@ -4,11 +4,29 @@ import {Link, useHistory} from "react-router-dom";
 import './Card.scss'
 import { useSelector } from "react-redux";
 import ButtonAddCart from '../ShopingCar/ButtonAddCart.jsx';
+import clienteAxios from '../../config/axios.js';
 
 const Cards = (products)=>{
     // console.log(products.id)
-    let idProduct = products.id
+    // let idProduct = products.id
     const {profile} = useSelector(state=>state.userReducer)
+    let history = useHistory()
+
+    async function handleClick(product){
+        console.log(product)
+        // e.preventDefault()
+        let id_cart = localStorage.getItem("id_cart")
+
+            if (!id_cart) {
+              let{data} = await clienteAxios.post("/shoping")
+              localStorage.setItem("id_cart", data._id)
+            }
+            id_cart = localStorage.getItem("id_cart")
+          
+        await clienteAxios.post(`/shoping/insert-product/${id_cart}`, product)
+        history.push("/shoping-car")
+  
+    }
     
     return (
 
@@ -36,7 +54,7 @@ const Cards = (products)=>{
                 <div className = 'cardText'>
                     <h4>${products.price}.00</h4>
                     {/* <Link to={`/detail/${products.id}`} className='detailsButton'> */}
-                    <ButtonAddCart {...products}/>
+                    <button onClick={()=>handleClick(products)}>Agregar</button>
                     {/* <h2>{products.seller}</h2> */}
                     {/* <p>{products.sales} ventas</p> */}
                     <Link to={`/detail/${products._id}`} className='detailsButton'>
