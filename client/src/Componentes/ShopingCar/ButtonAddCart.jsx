@@ -8,7 +8,7 @@ import './ShopingCard.scss'
 export default function ButtonAddCart(product) {
     // const { profile } = useSelector(state => state.userReducer)
     let history = useHistory()
-
+    console.log(product)
     async function handleClick(e) {
         e.preventDefault()
         let id_cart = localStorage.getItem("id_cart")

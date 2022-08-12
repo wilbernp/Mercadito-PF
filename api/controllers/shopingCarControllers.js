@@ -36,10 +36,9 @@ exports.getProductsInCar = async (req, res) => {
         if (cartProducts.products.length) {
             let info = calc(cartProducts.products)
             return res.send({user:cartProducts.user,products:cartProducts.products, calc:info})
-            
         }
         
-        res.send(cartProducts)
+        res.send("cartProducts")
         
     } catch (error) {
         console.log(error)
@@ -72,6 +71,8 @@ exports.updateShopingCar = async (req, res) =>{
 exports.insertProductToCart = async (req, res) =>{
     let {id} = req.params
     let cart = await shopingCarModel.findById(id)
+    // console.log(cart)
+    // console.log(req.body)
     cart.products.push(req.body)
     await cart.save()
     res.send(cart)
